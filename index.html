@@ -153,7 +153,7 @@
 <script>
 // ─── CONFIG ───────────────────────────────────────────────
 // PASTE YOUR APPS SCRIPT WEB APP URL HERE after deploying:
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzM_01L6MbDmBL6DjG2hyeGWUoVOfe3V4XFvoojHyrTVbxrDGJaTVnEN_wMEtjjbvhy/exec";
+const SCRIPT_URL = "YOUR_APPS_SCRIPT_URL_HERE";
 // ──────────────────────────────────────────────────────────
 
 const DEVIATION_TYPES = [
@@ -205,7 +205,7 @@ function setSyncStatus(s) {
 }
 
 async function loadData() {
-  if (!SCRIPT_URL || SCRIPT_URL === "https://script.google.com/macros/s/AKfycbzM_01L6MbDmBL6DjG2hyeGWUoVOfe3V4XFvoojHyrTVbxrDGJaTVnEN_wMEtjjbvhy/exec") return;
+  if (!SCRIPT_URL || SCRIPT_URL.indexOf("YOUR_APPS_SCRIPT") !== -1) return;
   setSyncStatus("syncing");
   try {
     const res = await fetch(`${SCRIPT_URL}?action=getAll`);
@@ -219,7 +219,7 @@ async function loadData() {
 }
 
 async function postData(body) {
-  if (!SCRIPT_URL || SCRIPT_URL === "https://script.google.com/macros/s/AKfycbzM_01L6MbDmBL6DjG2hyeGWUoVOfe3V4XFvoojHyrTVbxrDGJaTVnEN_wMEtjjbvhy/exec") return false;
+  if (!SCRIPT_URL || SCRIPT_URL.indexOf("YOUR_APPS_SCRIPT") !== -1) return false;
   setSyncStatus("syncing");
   try {
     await fetch(SCRIPT_URL, {
@@ -273,7 +273,7 @@ async function deleteDeviation(id) {
 
 // ─── RENDER HELPERS ───────────────────────────────────────
 function syncBar() {
-  if (!SCRIPT_URL || SCRIPT_URL === "https://script.google.com/macros/s/AKfycbzM_01L6MbDmBL6DjG2hyeGWUoVOfe3V4XFvoojHyrTVbxrDGJaTVnEN_wMEtjjbvhy/exec") {
+  if (!SCRIPT_URL || SCRIPT_URL.indexOf("YOUR_APPS_SCRIPT") !== -1) {
     return `<div class="config-banner">⚠ Paste your Apps Script URL into the HTML file to enable Google Sheets sync.</div>`;
   }
   const labels = { idle: "ready", syncing: "syncing…", synced: "synced with sheets", error: "sync error — check connection" };
