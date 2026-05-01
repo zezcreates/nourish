@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
@@ -23,95 +22,94 @@
   ::-webkit-scrollbar-thumb { background: #333; }
   ::placeholder { color: var(--dim); }
 
-.app { display: flex; flex-direction: column; height: 100vh; height: -webkit-fill-available; }
-.header { padding: 52px 20px 0; border-bottom: 1px solid var(–bg3); flex-shrink: 0; }
-.header-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; }
-.wordmark { font-family: ‘Cormorant Garamond’, serif; font-size: 28px; font-weight: 300; letter-spacing: 0.04em; }
-.wordmark-sub { font-family: ‘DM Mono’, monospace; font-size: 9px; color: var(–dim); letter-spacing: 0.14em; text-transform: uppercase; margin-top: 2px; }
-.streak { text-align: right; }
-.streak-num { font-family: ‘DM Mono’, monospace; font-size: 20px; color: var(–green); }
-.streak-label { font-family: ‘DM Mono’, monospace; font-size: 9px; color: var(–dim); letter-spacing: 0.1em; }
-.nav { display: flex; }
-.nav-btn { background: none; border: none; border-bottom: 2px solid transparent; color: var(–dim); padding: 8px 16px 10px; font-family: ‘DM Mono’, monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.15s; }
-.nav-btn.active { border-bottom-color: var(–text); color: var(–text); }
-.content { flex: 1; overflow-y: auto; padding: 24px 20px 100px; max-width: 480px; width: 100%; margin: 0 auto; }
+  .app { display: flex; flex-direction: column; height: 100vh; height: -webkit-fill-available; }
+  .header { padding: 52px 20px 0; border-bottom: 1px solid var(--bg3); flex-shrink: 0; }
+  .header-top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px; }
+  .wordmark { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; letter-spacing: 0.04em; }
+  .wordmark-sub { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--dim); letter-spacing: 0.14em; text-transform: uppercase; margin-top: 2px; }
+  .streak { text-align: right; }
+  .streak-num { font-family: 'DM Mono', monospace; font-size: 20px; color: var(--green); }
+  .streak-label { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--dim); letter-spacing: 0.1em; }
+  .nav { display: flex; }
+  .nav-btn { background: none; border: none; border-bottom: 2px solid transparent; color: var(--dim); padding: 8px 16px 10px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.15s; }
+  .nav-btn.active { border-bottom-color: var(--text); color: var(--text); }
+  .content { flex: 1; overflow-y: auto; padding: 24px 20px 100px; max-width: 480px; width: 100%; margin: 0 auto; }
 
-.sync-bar { font-family: ‘DM Mono’, monospace; font-size: 9px; color: var(–dim); letter-spacing: 0.08em; margin-bottom: 20px; display: flex; align-items: center; gap: 6px; }
-.sync-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; background: var(–dim); }
-.sync-dot.synced { background: var(–green); }
-.sync-dot.syncing { background: var(–gold); animation: pulse 1s infinite; }
-.sync-dot.error { background: var(–red); }
-@keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.3} }
+  .sync-bar { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--dim); letter-spacing: 0.08em; margin-bottom: 20px; display: flex; align-items: center; gap: 6px; }
+  .sync-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; background: var(--dim); }
+  .sync-dot.synced { background: var(--green); }
+  .sync-dot.syncing { background: var(--gold); animation: pulse 1s infinite; }
+  .sync-dot.error { background: var(--red); }
+  @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.3} }
 
-.win-btn { display: flex; align-items: center; width: 100%; background: transparent; border: 1px solid var(–bg3); border-radius: 6px; padding: 12px 14px; margin-bottom: 8px; color: var(–text); text-align: left; transition: all 0.15s; gap: 14px; }
-.win-btn.selected { background: var(–bg2); border-color: var(–sage); }
-.win-icon { font-family: ‘DM Mono’, monospace; font-size: 16px; color: var(–dim); width: 18px; flex-shrink: 0; }
-.win-btn.selected .win-icon { color: var(–sage); }
-.win-label { font-family: ‘Cormorant Garamond’, serif; font-size: 16px; }
-.win-note-text { font-family: ‘DM Mono’, monospace; font-size: 9px; color: var(–dim); margin-top: 2px; letter-spacing: 0.06em; }
+  .win-btn { display: flex; align-items: center; width: 100%; background: transparent; border: 1px solid var(--bg3); border-radius: 6px; padding: 12px 14px; margin-bottom: 8px; color: var(--text); text-align: left; transition: all 0.15s; gap: 14px; }
+  .win-btn.selected { background: var(--bg2); border-color: var(--sage); }
+  .win-icon { font-family: 'DM Mono', monospace; font-size: 16px; color: var(--dim); width: 18px; flex-shrink: 0; }
+  .win-btn.selected .win-icon { color: var(--sage); }
+  .win-label { font-family: 'Cormorant Garamond', serif; font-size: 16px; }
+  .win-note-text { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--dim); margin-top: 2px; letter-spacing: 0.06em; }
 
-.dev-btn { display: flex; align-items: center; width: 100%; background: transparent; border: 1px solid var(–bg3); border-radius: 6px; padding: 10px 14px; margin-bottom: 6px; color: var(–text); text-align: left; transition: all 0.15s; gap: 12px; }
-.dev-btn.selected { background: var(–bg2); border-color: var(–dim); }
-.dev-icon { font-family: ‘DM Mono’, monospace; font-size: 14px; color: var(–dim); width: 16px; flex-shrink: 0; }
-.dev-btn.selected .dev-icon { color: var(–gold); }
-.dev-label { font-family: ‘Cormorant Garamond’, serif; font-size: 14px; }
-.dev-note-text { font-family: ‘DM Mono’, monospace; font-size: 9px; color: var(–dim); margin-top: 1px; letter-spacing: 0.05em; }
+  .dev-btn { display: flex; align-items: center; width: 100%; background: transparent; border: 1px solid var(--bg3); border-radius: 6px; padding: 10px 14px; margin-bottom: 6px; color: var(--text); text-align: left; transition: all 0.15s; gap: 12px; }
+  .dev-btn.selected { background: var(--bg2); border-color: var(--dim); }
+  .dev-icon { font-family: 'DM Mono', monospace; font-size: 14px; color: var(--dim); width: 16px; flex-shrink: 0; }
+  .dev-btn.selected .dev-icon { color: var(--gold); }
+  .dev-label { font-family: 'Cormorant Garamond', serif; font-size: 14px; }
+  .dev-note-text { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--dim); margin-top: 1px; letter-spacing: 0.05em; }
 
-.textarea { width: 100%; background: var(–bg2); border: 1px solid var(–border); border-radius: 6px; padding: 12px 14px; color: var(–text); font-family: ‘Cormorant Garamond’, serif; font-size: 15px; resize: none; margin-bottom: 14px; }
-.input { width: 100%; background: var(–bg); border: 1px solid var(–border); border-radius: 4px; padding: 8px 10px; color: var(–text); font-family: ‘Cormorant Garamond’, serif; font-size: 18px; }
-.section-label { font-family: ‘DM Mono’, monospace; font-size: 9px; color: var(–dim); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; }
-.section-title { font-family: ‘Cormorant Garamond’, serif; font-size: 18px; font-weight: 300; margin-bottom: 16px; }
+  .textarea { width: 100%; background: var(--bg2); border: 1px solid var(--border); border-radius: 6px; padding: 12px 14px; color: var(--text); font-family: 'Cormorant Garamond', serif; font-size: 15px; resize: none; margin-bottom: 14px; }
+  .input { width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 8px 10px; color: var(--text); font-family: 'Cormorant Garamond', serif; font-size: 18px; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--dim); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; }
+  .section-title { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 300; margin-bottom: 16px; }
 
-.btn-primary { width: 100%; padding: 14px; border-radius: 6px; font-family: ‘DM Mono’, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.2s; border: none; }
-.btn-green { background: var(–sage); color: var(–bg); }
-.btn-gold { background: var(–gold); color: var(–bg); }
-.btn-light { background: var(–text); color: var(–bg); }
-.btn-saved { background: #2a4a35; color: var(–green); }
+  .btn-primary { width: 100%; padding: 14px; border-radius: 6px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; transition: all 0.2s; border: none; }
+  .btn-green { background: var(--sage); color: var(--bg); }
+  .btn-gold { background: var(--gold); color: var(--bg); }
+  .btn-light { background: var(--text); color: var(--bg); }
+  .btn-saved { background: #2a4a35; color: var(--green); }
 
-.card { background: var(–bg2); border: 1px solid var(–bg3); border-radius: 10px; padding: 18px; margin-bottom: 16px; }
-.divider { border: none; border-top: 1px solid var(–bg3); margin: 20px 0; }
+  .card { background: var(--bg2); border: 1px solid var(--bg3); border-radius: 10px; padding: 18px; margin-bottom: 16px; }
+  .divider { border: none; border-top: 1px solid var(--bg3); margin: 20px 0; }
 
-.entry-row { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(–bg2); }
-.entry-icon { font-family: ‘DM Mono’, monospace; font-size: 12px; margin-top: 1px; flex-shrink: 0; }
-.entry-main { font-family: ‘Cormorant Garamond’, serif; font-size: 14px; }
-.entry-sub { font-family: ‘Cormorant Garamond’, serif; font-size: 12px; color: var(–dim); font-style: italic; margin-top: 2px; }
-.entry-time { text-align: right; flex-shrink: 0; font-family: ‘DM Mono’, monospace; font-size: 9px; color: var(–dim); }
-.delete-btn { color: var(–dim); font-size: 16px; padding: 0 0 0 8px; line-height: 1; flex-shrink: 0; }
+  .entry-row { display: flex; gap: 10px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--bg2); }
+  .entry-icon { font-family: 'DM Mono', monospace; font-size: 12px; margin-top: 1px; flex-shrink: 0; }
+  .entry-main { font-family: 'Cormorant Garamond', serif; font-size: 14px; }
+  .entry-sub { font-family: 'Cormorant Garamond', serif; font-size: 12px; color: var(--dim); font-style: italic; margin-top: 2px; }
+  .entry-time { text-align: right; flex-shrink: 0; font-family: 'DM Mono', monospace; font-size: 9px; color: var(--dim); }
+  .delete-btn { color: var(--dim); font-size: 16px; padding: 0 0 0 8px; line-height: 1; flex-shrink: 0; }
 
-.collapsible-header { display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 10px 0; }
-.collapsible-title { font-family: ‘DM Mono’, monospace; font-size: 10px; color: var(–gold); letter-spacing: 0.1em; text-transform: uppercase; }
-.collapsible-arrow { font-family: ‘DM Mono’, monospace; font-size: 10px; color: var(–dim); transition: transform 0.2s; display: inline-block; }
-.collapsible-arrow.open { transform: rotate(180deg); }
+  .collapsible-header { display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 10px 0; }
+  .collapsible-title { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gold); letter-spacing: 0.1em; text-transform: uppercase; }
+  .collapsible-arrow { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--dim); transition: transform 0.2s; display: inline-block; }
+  .collapsible-arrow.open { transform: rotate(180deg); }
 
-.phase-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
-.phase-pill { padding: 6px 14px; border-radius: 20px; font-family: ‘DM Mono’, monospace; font-size: 10px; letter-spacing: 0.08em; border: 1px solid var(–bg3); color: var(–dim); background: transparent; transition: all 0.15s; }
-.phase-pill.selected { border-color: var(–gold); color: var(–gold); background: #1f150a; }
+  .phase-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+  .phase-pill { padding: 6px 14px; border-radius: 20px; font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; border: 1px solid var(--bg3); color: var(--dim); background: transparent; transition: all 0.15s; }
+  .phase-pill.selected { border-color: var(--gold); color: var(--gold); background: #1f150a; }
 
-.meas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
-.meas-field label { font-family: ‘DM Mono’, monospace; font-size: 9px; color: var(–dim); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 6px; }
-.meas-val { font-family: ‘Cormorant Garamond’, serif; font-size: 28px; font-weight: 300; }
-.meas-unit { font-family: ‘DM Mono’, monospace; font-size: 10px; color: var(–dim); margin-left: 2px; }
-.delta { font-size: 10px; padding: 2px 6px; border-radius: 10px; margin-left: 6px; font-family: ‘DM Mono’, monospace; }
-.delta-down { background: #1a3a28; color: var(–green); }
-.delta-up { background: #3a1a14; color: var(–red); }
-.delta-same { background: var(–bg3); color: var(–dim); }
+  .meas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 18px; }
+  .meas-field label { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--dim); letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+  .meas-val { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; }
+  .meas-unit { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--dim); margin-left: 2px; }
+  .delta { font-size: 10px; padding: 2px 6px; border-radius: 10px; margin-left: 6px; font-family: 'DM Mono', monospace; }
+  .delta-down { background: #1a3a28; color: var(--green); }
+  .delta-up { background: #3a1a14; color: var(--red); }
+  .delta-same { background: var(--bg3); color: var(--dim); }
 
-.week-block { margin-bottom: 28px; }
-.week-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
-.week-label-text { font-family: ‘Cormorant Garamond’, serif; font-size: 16px; }
-.week-wins { font-family: ‘DM Mono’, monospace; font-size: 11px; color: var(–sage); }
-.tag-row { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
-.tag { background: var(–bg2); border: 1px solid var(–border); border-radius: 4px; padding: 4px 8px; display: flex; align-items: center; gap: 5px; }
-.tag-icon-sm { font-family: ‘DM Mono’, monospace; font-size: 10px; }
-.tag-count { font-family: ‘DM Mono’, monospace; font-size: 9px; color: var(–muted); }
-.tag-name { font-family: ‘Cormorant Garamond’, serif; font-size: 11px; color: var(–muted); }
+  .week-block { margin-bottom: 28px; }
+  .week-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+  .week-label-text { font-family: 'Cormorant Garamond', serif; font-size: 16px; }
+  .week-wins { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--sage); }
+  .tag-row { display: flex; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+  .tag { background: var(--bg2); border: 1px solid var(--border); border-radius: 4px; padding: 4px 8px; display: flex; align-items: center; gap: 5px; }
+  .tag-icon-sm { font-family: 'DM Mono', monospace; font-size: 10px; }
+  .tag-count { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--muted); }
+  .tag-name { font-family: 'Cormorant Garamond', serif; font-size: 11px; color: var(--muted); }
 
-.empty { text-align: center; color: var(–dim); font-family: ‘Cormorant Garamond’, serif; font-size: 15px; font-style: italic; margin-top: 60px; }
-.empty small { font-size: 12px; font-family: ‘DM Mono’, monospace; display: block; margin-top: 6px; }
-@keyframes fadeIn { from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)} }
-.fade-in { animation: fadeIn 0.2s ease; }
+  .empty { text-align: center; color: var(--dim); font-family: 'Cormorant Garamond', serif; font-size: 15px; font-style: italic; margin-top: 60px; }
+  .empty small { font-size: 12px; font-family: 'DM Mono', monospace; display: block; margin-top: 6px; }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)} }
+  .fade-in { animation: fadeIn 0.2s ease; }
 </style>
-
 </head>
 <body>
 <div class="app">
@@ -140,291 +138,329 @@ const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzM_01L6MbDmBL6DjG2h
 // ─────────────────────────────────────────────────────────
 
 const WIN_TYPES = [
-{ id:“ate_hungry”,   label:“Ate when hungry”,           icon:“◎”, note:“started at 3–4 on the scale” },
-{ id:“stopped_well”, label:“Stopped when satisfied”,    icon:“◉”, note:“stopped at 6–7, not full” },
-{ id:“paused”,       label:“Paused before eating”,      icon:“○”, note:“checked in before acting on hunger” },
-{ id:“stayed_norm”,  label:“Stayed within usual foods”, icon:“◇”, note:“ate from my baseline” },
-{ id:“felt_good”,    label:“Felt good after eating”,    icon:“◈”, note:“energy, no regret, satisfied” },
+  { id:"ate_hungry",   label:"Ate when hungry",           icon:"◎", note:"started at 3–4 on the scale" },
+  { id:"stopped_well", label:"Stopped when satisfied",    icon:"◉", note:"stopped at 6–7, not full" },
+  { id:"paused",       label:"Paused before eating",      icon:"○", note:"checked in before acting on hunger" },
+  { id:"stayed_norm",  label:"Stayed within usual foods", icon:"◇", note:"ate from my baseline" },
+  { id:"felt_good",    label:"Felt good after eating",    icon:"◈", note:"energy, no regret, satisfied" },
 ];
 const DEV_TYPES = [
-{ id:“not_hungry”,   label:“Ate when not hungry”,     icon:“○”, note:“stress, emotional, social” },
-{ id:“past_full”,    label:“Ate past full”,            icon:“◉”, note:“went beyond satisfied” },
-{ id:“outside_norm”, label:“Ate outside usual foods”,  icon:“◇”, note:“different from routine” },
-{ id:“late_night”,   label:“Late night eating”,        icon:“◐”, note:“after dinner” },
+  { id:"not_hungry",   label:"Ate when not hungry",     icon:"○", note:"stress, emotional, social" },
+  { id:"past_full",    label:"Ate past full",            icon:"◉", note:"went beyond satisfied" },
+  { id:"outside_norm", label:"Ate outside usual foods",  icon:"◇", note:"different from routine" },
+  { id:"late_night",   label:"Late night eating",        icon:"◐", note:"after dinner" },
 ];
-const PHASES = [“Follicular”,“Ovulatory”,“Luteal”,“Menstrual”];
-const MONTHS = [“Jan”,“Feb”,“Mar”,“Apr”,“May”,“Jun”,“Jul”,“Aug”,“Sep”,“Oct”,“Nov”,“Dec”];
+const PHASES = ["Follicular","Ovulatory","Luteal","Menstrual"];
+const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
 let state = {
-view:“log”, wins:[], devs:[], measurements:[],
-winForm:{ types:[], note:”” },
-devForm:{ type:null, note:”” },
-measForm:{ waist:””, hips:””, bust:””, weight:””, phase:”” },
-devOpen:false, syncStatus:“idle”,
-winSaved:false, devSaved:false, measSaved:false,
+  view:"log", wins:[], devs:[], measurements:[],
+  winForm:{ types:[], note:"" },
+  devForm:{ type:null, note:"" },
+  measForm:{ waist:"", hips:"", bust:"", weight:"", phase:"" },
+  devOpen:false, syncStatus:"idle",
+  winSaved:false, devSaved:false, measSaved:false,
 };
 
 function todayStr() {
-const d=new Date();
-return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+  const d=new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
 }
 function weekKey(ds) {
-const d=new Date(ds+“T00:00:00”), s=new Date(d);
-s.setDate(d.getDate()-d.getDay());
-return `${s.getFullYear()}-${String(s.getMonth()+1).padStart(2,"0")}-${String(s.getDate()).padStart(2,"0")}`;
+  const d=new Date(ds+"T00:00:00"), s=new Date(d);
+  s.setDate(d.getDate()-d.getDay());
+  return `${s.getFullYear()}-${String(s.getMonth()+1).padStart(2,"0")}-${String(s.getDate()).padStart(2,"0")}`;
 }
 function getWeekLabel(wk) {
-const s=new Date(wk+“T00:00:00”), e=new Date(s); e.setDate(s.getDate()+6);
-return `${MONTHS[s.getMonth()]} ${s.getDate()} – ${MONTHS[e.getMonth()]} ${e.getDate()}`;
+  const s=new Date(wk+"T00:00:00"), e=new Date(s); e.setDate(s.getDate()+6);
+  return `${MONTHS[s.getMonth()]} ${s.getDate()} – ${MONTHS[e.getMonth()]} ${e.getDate()}`;
 }
-function formatTime() { return new Date().toLocaleTimeString([],{hour:“2-digit”,minute:“2-digit”}); }
+function formatTime() { return new Date().toLocaleTimeString([],{hour:"2-digit",minute:"2-digit"}); }
 
 function calcStreak() {
-const days=[…new Set(state.wins.map(w=>w.date))].sort((a,b)=>b.localeCompare(a));
-if (!days.length) return 0;
-let streak=0, check=new Date();
-for (const day of days) {
-const d=new Date(day+“T00:00:00”);
-if (Math.round((check-d)/86400000)<=1) { streak++; check=d; } else break;
-}
-return streak;
+  const days=[...new Set(state.wins.map(w=>w.date))].sort((a,b)=>b.localeCompare(a));
+  if (!days.length) return 0;
+  let streak=0, check=new Date();
+  for (const day of days) {
+    const d=new Date(day+"T00:00:00");
+    if (Math.round((check-d)/86400000)<=1) { streak++; check=d; } else break;
+  }
+  return streak;
 }
 
 function setSyncStatus(s) { state.syncStatus=s; render(); }
 
 async function loadData() {
-if (!SCRIPT_URL||SCRIPT_URL.indexOf(“YOUR_APPS_SCRIPT”)!==-1) return;
-setSyncStatus(“syncing”);
-try {
-const res=await fetch(`${SCRIPT_URL}?action=getAll`);
-const data=await res.json();
-state.wins=data.wins||[];
-state.devs=data.devs||(data.deviations||[]);
-state.measurements=data.measurements||[];
-setSyncStatus(“synced”);
-} catch(e) { setSyncStatus(“error”); }
+  if (!SCRIPT_URL||SCRIPT_URL.indexOf("YOUR_APPS_SCRIPT")!==-1) return;
+  setSyncStatus("syncing");
+  try {
+    const res=await fetch(`${SCRIPT_URL}?action=getAll`);
+    const data=await res.json();
+    state.wins=data.wins||[];
+    state.devs=data.devs||(data.deviations||[]);
+    state.measurements=data.measurements||[];
+    setSyncStatus("synced");
+  } catch(e) { setSyncStatus("error"); }
 }
 
 async function postData(body) {
-if (!SCRIPT_URL||SCRIPT_URL.indexOf(“YOUR_APPS_SCRIPT”)!==-1) return;
-setSyncStatus(“syncing”);
-try { await fetch(SCRIPT_URL,{method:“POST”,body:JSON.stringify(body)}); setSyncStatus(“synced”); }
-catch(e) { setSyncStatus(“error”); }
+  if (!SCRIPT_URL||SCRIPT_URL.indexOf("YOUR_APPS_SCRIPT")!==-1) return;
+  setSyncStatus("syncing");
+  try { await fetch(SCRIPT_URL,{method:"POST",body:JSON.stringify(body)}); setSyncStatus("synced"); }
+  catch(e) { setSyncStatus("error"); }
 }
 
 async function logWin() {
-if (!state.winForm.types.length) return;
-const entry={id:Date.now(),date:todayStr(),time:formatTime(),weekKey:weekKey(todayStr()),types:state.winForm.types.join(”,”),note:state.winForm.note};
-state.wins=[entry,…state.wins]; state.winForm={types:[],note:””}; state.winSaved=true; render();
-await postData({action:“logWin”,entry});
-setTimeout(()=>{state.winSaved=false;render();},2000);
+  if (!state.winForm.types.length) return;
+  const entry={id:Date.now(),date:todayStr(),time:formatTime(),weekKey:weekKey(todayStr()),types:state.winForm.types.join(","),note:state.winForm.note};
+  state.wins=[entry,...state.wins]; state.winForm={types:[],note:""}; state.winSaved=true; render();
+  await postData({action:"logWin",entry});
+  setTimeout(()=>{state.winSaved=false;render();},2000);
 }
 
 async function logDev() {
-if (!state.devForm.type) return;
-const entry={id:Date.now(),date:todayStr(),time:formatTime(),weekKey:weekKey(todayStr()),type:state.devForm.type,note:state.devForm.note};
-state.devs=[entry,…state.devs]; state.devForm={type:null,note:””}; state.devSaved=true; render();
-await postData({action:“logDev”,entry});
-setTimeout(()=>{state.devSaved=false;render();},2000);
+  if (!state.devForm.type) return;
+  const entry={id:Date.now(),date:todayStr(),time:formatTime(),weekKey:weekKey(todayStr()),type:state.devForm.type,note:state.devForm.note};
+  state.devs=[entry,...state.devs]; state.devForm={type:null,note:""}; state.devSaved=true; render();
+  await postData({action:"logDev",entry});
+  setTimeout(()=>{state.devSaved=false;render();},2000);
 }
 
 async function saveMeasurement() {
-const f=state.measForm;
-if (!f.waist&&!f.hips&&!f.bust&&!f.weight) return;
-const today=todayStr();
-const entry={id:Date.now(),date:today,weekKey:weekKey(today),…f};
-state.measurements=[entry,…state.measurements.filter(m=>m.date!==today)];
-state.measSaved=true; render();
-await postData({action:“saveMeasurement”,entry});
-setTimeout(()=>{state.measSaved=false;render();},2000);
+  const f=state.measForm;
+  if (!f.waist&&!f.hips&&!f.bust&&!f.weight) return;
+  const today=todayStr();
+  const entry={id:Date.now(),date:today,weekKey:weekKey(today),...f};
+  state.measurements=[entry,...state.measurements.filter(m=>m.date!==today)];
+  state.measSaved=true; render();
+  await postData({action:"saveMeasurement",entry});
+  setTimeout(()=>{state.measSaved=false;render();},2000);
 }
 
 async function deleteEntry(id,kind) {
-if (kind===“win”) state.wins=state.wins.filter(w=>String(w.id)!==String(id));
-else state.devs=state.devs.filter(d=>String(d.id)!==String(id));
-render();
-await postData({action:kind===“win”?“deleteWin”:“deleteDev”,id});
+  if (kind==="win") state.wins=state.wins.filter(w=>String(w.id)!==String(id));
+  else state.devs=state.devs.filter(d=>String(d.id)!==String(id));
+  render();
+  await postData({action:kind==="win"?"deleteWin":"deleteDev",id});
 }
 
 function syncBar() {
-if (!SCRIPT_URL||SCRIPT_URL.indexOf(“YOUR_APPS_SCRIPT”)!==-1) return “”;
-const labels={idle:“ready”,syncing:“syncing…”,synced:“synced with sheets”,error:“sync error”};
-return `<div class="sync-bar"><div class="sync-dot ${state.syncStatus}"></div>${labels[state.syncStatus]||""}</div>`;
+  if (!SCRIPT_URL||SCRIPT_URL.indexOf("YOUR_APPS_SCRIPT")!==-1) return "";
+  const labels={idle:"ready",syncing:"syncing…",synced:"synced with sheets",error:"sync error"};
+  return `<div class="sync-bar"><div class="sync-dot ${state.syncStatus}"></div>${labels[state.syncStatus]||""}</div>`;
 }
 
 function delta(field) {
-const m=state.measurements;
-if (m.length<2||!m[0][field]||!m[1][field]) return null;
-return parseFloat(m[0][field])-parseFloat(m[1][field]);
+  const m=state.measurements;
+  if (m.length<2||!m[0][field]||!m[1][field]) return null;
+  return parseFloat(m[0][field])-parseFloat(m[1][field]);
 }
 function deltaBadge(field,unit) {
-const d=delta(field); if (d===null) return “”;
-const cls=d<0?“delta-down”:d>0?“delta-up”:“delta-same”;
-return `<span class="delta ${cls}">${d>0?"+":""}${d.toFixed(1)}${unit}</span>`;
+  const d=delta(field); if (d===null) return "";
+  const cls=d<0?"delta-down":d>0?"delta-up":"delta-same";
+  return `<span class="delta ${cls}">${d>0?"+":""}${d.toFixed(1)}${unit}</span>`;
 }
 
 function renderLog() {
-const todayWins=state.wins.filter(w=>w.date===todayStr());
-const todayDevs=state.devs.filter(d=>d.date===todayStr());
+  const todayWins=state.wins.filter(w=>w.date===todayStr());
+  const todayDevs=state.devs.filter(d=>d.date===todayStr());
 
-const winButtons=WIN_TYPES.map(t=>{
-const sel=state.winForm.types.includes(t.id);
-return `<button class="win-btn ${sel?"selected":""}" onclick="toggleWinType('${t.id}')"> <span class="win-icon">${t.icon}</span> <div><div class="win-label">${t.label}</div><div class="win-note-text">${t.note}</div></div> ${sel?'<span style="margin-left:auto;color:var(--sage);font-family:DM Mono,monospace;font-size:11px">✓</span>':""} </button>`;
-}).join(””);
+  const winButtons=WIN_TYPES.map(t=>{
+    const sel=state.winForm.types.includes(t.id);
+    return `<button class="win-btn ${sel?"selected":""}" onclick="toggleWinType('${t.id}')">
+      <span class="win-icon">${t.icon}</span>
+      <div><div class="win-label">${t.label}</div><div class="win-note-text">${t.note}</div></div>
+      ${sel?'<span style="margin-left:auto;color:var(--sage);font-family:DM Mono,monospace;font-size:11px">✓</span>':""}
+    </button>`;
+  }).join("");
 
-const winNote=state.winForm.types.length?`<div class="fade-in">
-<textarea class="textarea" rows="2" placeholder="Any reflection? (optional)" oninput="state.winForm.note=this.value">${state.winForm.note}</textarea>
-<button class=“btn-primary ${state.winSaved?“btn-saved”:“btn-green”}” onclick=“logWin()”>${state.winSaved?“logged ✓”:“log win”}</button>
-
+  const winNote=state.winForm.types.length?`<div class="fade-in">
+    <textarea class="textarea" rows="2" placeholder="Any reflection? (optional)" oninput="state.winForm.note=this.value">${state.winForm.note}</textarea>
+    <button class="btn-primary ${state.winSaved?"btn-saved":"btn-green"}" onclick="logWin()">${state.winSaved?"logged ✓":"log win"}</button>
   </div>`:"";
 
-const devButtons=DEV_TYPES.map(t=>{
-const sel=state.devForm.type===t.id;
-return `<button class="dev-btn ${sel?"selected":""}" onclick="toggleDevType('${t.id}')"> <span class="dev-icon">${t.icon}</span> <div><div class="dev-label">${t.label}</div><div class="dev-note-text">${t.note}</div></div> ${sel?'<span style="margin-left:auto;color:var(--gold);font-family:DM Mono,monospace;font-size:10px">✓</span>':""} </button>`;
-}).join(””);
+  const devButtons=DEV_TYPES.map(t=>{
+    const sel=state.devForm.type===t.id;
+    return `<button class="dev-btn ${sel?"selected":""}" onclick="toggleDevType('${t.id}')">
+      <span class="dev-icon">${t.icon}</span>
+      <div><div class="dev-label">${t.label}</div><div class="dev-note-text">${t.note}</div></div>
+      ${sel?'<span style="margin-left:auto;color:var(--gold);font-family:DM Mono,monospace;font-size:10px">✓</span>':""}
+    </button>`;
+  }).join("");
 
-const devNote=state.devForm.type?`<div class="fade-in">
-<textarea class="textarea" rows="2" placeholder="Any context? (optional)" oninput="state.devForm.note=this.value">${state.devForm.note}</textarea>
-<button class=“btn-primary ${state.devSaved?“btn-saved”:“btn-gold”}” onclick=“logDev()”>${state.devSaved?“noted ✓”:“note deviation”}</button>
-
+  const devNote=state.devForm.type?`<div class="fade-in">
+    <textarea class="textarea" rows="2" placeholder="Any context? (optional)" oninput="state.devForm.note=this.value">${state.devForm.note}</textarea>
+    <button class="btn-primary ${state.devSaved?"btn-saved":"btn-gold"}" onclick="logDev()">${state.devSaved?"noted ✓":"note deviation"}</button>
   </div>`:"";
 
-const todaySection=(todayWins.length||todayDevs.length)?`<hr class="divider"/> <div class="section-label" style="margin-bottom:12px">Today</div> ${todayWins.map(w=>{ const types=w.types.split(",").map(id=>WIN_TYPES.find(t=>t.id===id)).filter(Boolean); return`<div class="entry-row">
-<span class="entry-icon" style="color:var(--sage)">${types[0]?.icon||“◎”}</span>
-<div style="flex:1"><div class="entry-main">${types.map(t=>t.label).join(” · “)}</div>${w.note?`<div class="entry-sub">${w.note}</div>`:””}</div>
-<div class="entry-time">${w.time}</div>
-<button class="delete-btn" onclick="deleteEntry(${w.id},'win')">×</button>
-</div>`; }).join("")} ${todayDevs.map(d=>{ const t=DEV_TYPES.find(t=>t.id===d.type); return `<div class="entry-row">
-<span class="entry-icon" style="color:var(--gold)">${t?.icon||“○”}</span>
-<div style="flex:1"><div class="entry-main" style="color:var(--muted)">${t?.label||d.type}</div>${d.note?`<div class="entry-sub">${d.note}</div>`:””}</div>
-<div class="entry-time">${d.time}</div>
-<button class="delete-btn" onclick="deleteEntry(${d.id},'dev')">×</button>
-</div>`; }).join("")}`:””;
+  const todaySection=(todayWins.length||todayDevs.length)?`
+    <hr class="divider"/>
+    <div class="section-label" style="margin-bottom:12px">Today</div>
+    ${todayWins.map(w=>{
+      const types=w.types.split(",").map(id=>WIN_TYPES.find(t=>t.id===id)).filter(Boolean);
+      return `<div class="entry-row">
+        <span class="entry-icon" style="color:var(--sage)">${types[0]?.icon||"◎"}</span>
+        <div style="flex:1"><div class="entry-main">${types.map(t=>t.label).join(" · ")}</div>${w.note?`<div class="entry-sub">${w.note}</div>`:""}</div>
+        <div class="entry-time">${w.time}</div>
+        <button class="delete-btn" onclick="deleteEntry(${w.id},'win')">×</button>
+      </div>`;
+    }).join("")}
+    ${todayDevs.map(d=>{
+      const t=DEV_TYPES.find(t=>t.id===d.type);
+      return `<div class="entry-row">
+        <span class="entry-icon" style="color:var(--gold)">${t?.icon||"○"}</span>
+        <div style="flex:1"><div class="entry-main" style="color:var(--muted)">${t?.label||d.type}</div>${d.note?`<div class="entry-sub">${d.note}</div>`:""}</div>
+        <div class="entry-time">${d.time}</div>
+        <button class="delete-btn" onclick="deleteEntry(${d.id},'dev')">×</button>
+      </div>`;
+    }).join("")}`:"";
 
-return `${syncBar()} <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--dim);margin-bottom:20px;font-style:italic">What's working right now?</div> ${winButtons}${winNote} <hr class="divider"/> <div class="collapsible-header" onclick="toggleDevOpen()"> <span class="collapsible-title">Note a deviation (optional)</span> <span class="collapsible-arrow ${state.devOpen?"open":""}">▾</span> </div> ${state.devOpen?`<div class="fade-in" style="margin-top:12px">${devButtons}${devNote}</div>`:""} ${todaySection}`;
+  return `${syncBar()}
+    <div style="font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--dim);margin-bottom:20px;font-style:italic">What's working right now?</div>
+    ${winButtons}${winNote}
+    <hr class="divider"/>
+    <div class="collapsible-header" onclick="toggleDevOpen()">
+      <span class="collapsible-title">Note a deviation (optional)</span>
+      <span class="collapsible-arrow ${state.devOpen?"open":""}">▾</span>
+    </div>
+    ${state.devOpen?`<div class="fade-in" style="margin-top:12px">${devButtons}${devNote}</div>`:""}
+    ${todaySection}`;
 }
 
 function renderResults() {
-const latest=state.measurements[0];
-const fields=[[“waist”,“Waist”,“in”],[“hips”,“Hips”,“in”],[“bust”,“Bust”,“in”],[“weight”,“Weight”,“lb”]];
-const f=state.measForm;
+  const latest=state.measurements[0];
+  const fields=[["waist","Waist","in"],["hips","Hips","in"],["bust","Bust","in"],["weight","Weight","lb"]];
+  const f=state.measForm;
 
-const latestCard=latest?`<div class="card"> <div class="section-label">Latest · ${latest.date}${latest.phase?` · <span style="color:var(--gold);text-transform:none;letter-spacing:0">${latest.phase}</span>`:""}</div> <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px"> ${fields.map(([field,label,unit])=>latest[field]?`
-<div><div class="section-label">${label}</div>
-<span class="meas-val">${latest[field]}</span><span class="meas-unit">${unit}</span>${deltaBadge(field,unit)}
-</div>`:””).join(””)}
-</div>
-
+  const latestCard=latest?`<div class="card">
+    <div class="section-label">Latest · ${latest.date}${latest.phase?` · <span style="color:var(--gold);text-transform:none;letter-spacing:0">${latest.phase}</span>`:""}</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px">
+      ${fields.map(([field,label,unit])=>latest[field]?`
+        <div><div class="section-label">${label}</div>
+          <span class="meas-val">${latest[field]}</span><span class="meas-unit">${unit}</span>${deltaBadge(field,unit)}
+        </div>`:"").join("")}
+    </div>
   </div>`:"";
 
-const phaseButtons=PHASES.map(p=>`<button class="phase-pill ${f.phase===p?"selected":""}" onclick="setPhase('${p}')">${p}</button>`).join(””);
+  const phaseButtons=PHASES.map(p=>`<button class="phase-pill ${f.phase===p?"selected":""}" onclick="setPhase('${p}')">${p}</button>`).join("");
 
-const logCard=`<div class="card"> <div class="section-title">Log measurements</div> <div class="section-label">Cycle phase</div> <div class="phase-row">${phaseButtons}</div> <div class="meas-grid"> ${fields.map(([field,label,unit])=>`
-<div class="meas-field"><label>${label} (${unit})${field===“weight”?” · monthly”:””}</label>
-<input class="input" type="number" step="0.1" placeholder="—" value="${f[field]}" oninput="state.measForm['${field}']=this.value"/>
-</div>`).join(””)}
-</div>
-<button class=“btn-primary ${state.measSaved?“btn-saved”:“btn-light”}” onclick=“saveMeasurement()”>${state.measSaved?“saved ✓”:“save measurements”}</button>
-
+  const logCard=`<div class="card">
+    <div class="section-title">Log measurements</div>
+    <div class="section-label">Cycle phase</div>
+    <div class="phase-row">${phaseButtons}</div>
+    <div class="meas-grid">
+      ${fields.map(([field,label,unit])=>`
+        <div class="meas-field"><label>${label} (${unit})${field==="weight"?" · monthly":""}</label>
+          <input class="input" type="number" step="0.1" placeholder="—" value="${f[field]}" oninput="state.measForm['${field}']=this.value"/>
+        </div>`).join("")}
+    </div>
+    <button class="btn-primary ${state.measSaved?"btn-saved":"btn-light"}" onclick="saveMeasurement()">${state.measSaved?"saved ✓":"save measurements"}</button>
   </div>`;
 
-const history=state.measurements.length>1?` <div class="section-label" style="margin-top:4px">History</div> ${state.measurements.slice(0,10).map((m,i)=>`
-<div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--bg2)">
-<div>
-<div style=“font-family:‘DM Mono’,monospace;font-size:10px;color:${i===0?“var(–text)”:“var(–dim)”}”>${m.date}</div>
-${m.phase?`<div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--gold);margin-top:2px">${m.phase}</div>`:””}
-</div>
-<div style="display:flex;gap:14px">
-${fields.map(([field])=>m[field]?` <div style="text-align:right"> <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--dim)">${field[0].toUpperCase()}</div> <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:${i===0?"var(--text)":"var(--muted)"}">${m[field]}</div> </div>`:””).join(””)}
-</div>
-</div>`).join("")}`:””;
+  const history=state.measurements.length>1?`
+    <div class="section-label" style="margin-top:4px">History</div>
+    ${state.measurements.slice(0,10).map((m,i)=>`
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--bg2)">
+        <div>
+          <div style="font-family:'DM Mono',monospace;font-size:10px;color:${i===0?"var(--text)":"var(--dim)"}">${m.date}</div>
+          ${m.phase?`<div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--gold);margin-top:2px">${m.phase}</div>`:""}
+        </div>
+        <div style="display:flex;gap:14px">
+          ${fields.map(([field])=>m[field]?`
+            <div style="text-align:right">
+              <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--dim)">${field[0].toUpperCase()}</div>
+              <div style="font-family:'Cormorant Garamond',serif;font-size:15px;color:${i===0?"var(--text)":"var(--muted)"}">${m[field]}</div>
+            </div>`:"").join("")}
+        </div>
+      </div>`).join("")}`:"";
 
-return `${syncBar()}${latestCard}${logCard}${history}`;
+  return `${syncBar()}${latestCard}${logCard}${history}`;
 }
 
 function renderHistory() {
-const all=[
-…state.wins.map(w=>({…w,kind:“win”})),
-…state.devs.map(d=>({…d,kind:“dev”})),
-];
-const byWeek=all.reduce((acc,e)=>{if(!acc[e.weekKey])acc[e.weekKey]=[];acc[e.weekKey].push(e);return acc;},{});
-const wks=Object.keys(byWeek).sort((a,b)=>b.localeCompare(a));
-if (!wks.length) return `${syncBar()}<div class="empty">No entries yet.<small>Start logging today.</small></div>`;
-const thisWk=weekKey(todayStr());
+  const all=[
+    ...state.wins.map(w=>({...w,kind:"win"})),
+    ...state.devs.map(d=>({...d,kind:"dev"})),
+  ];
+  const byWeek=all.reduce((acc,e)=>{if(!acc[e.weekKey])acc[e.weekKey]=[];acc[e.weekKey].push(e);return acc;},{});
+  const wks=Object.keys(byWeek).sort((a,b)=>b.localeCompare(a));
+  if (!wks.length) return `${syncBar()}<div class="empty">No entries yet.<small>Start logging today.</small></div>`;
+  const thisWk=weekKey(todayStr());
 
-return syncBar()+wks.map(wk=>{
-const entries=byWeek[wk].sort((a,b)=>b.date.localeCompare(a.date)||b.time.localeCompare(a.time));
-const wins=entries.filter(e=>e.kind===“win”);
-const devs=entries.filter(e=>e.kind===“dev”);
-const isThis=wk===thisWk;
+  return syncBar()+wks.map(wk=>{
+    const entries=byWeek[wk].sort((a,b)=>b.date.localeCompare(a.date)||b.time.localeCompare(a.time));
+    const wins=entries.filter(e=>e.kind==="win");
+    const devs=entries.filter(e=>e.kind==="dev");
+    const isThis=wk===thisWk;
 
-```
-const winCounts={};
-wins.forEach(w=>w.types.split(",").forEach(t=>{winCounts[t]=(winCounts[t]||0)+1;}));
-const winTags=Object.entries(winCounts).map(([id,count])=>{
-  const t=WIN_TYPES.find(t=>t.id===id);
-  return `<div class="tag"><span class="tag-icon-sm" style="color:var(--sage)">${t?.icon}</span><span class="tag-count">${count}×</span><span class="tag-name">${t?.label.split(" ").slice(0,2).join(" ")}</span></div>`;
-}).join("");
+    const winCounts={};
+    wins.forEach(w=>w.types.split(",").forEach(t=>{winCounts[t]=(winCounts[t]||0)+1;}));
+    const winTags=Object.entries(winCounts).map(([id,count])=>{
+      const t=WIN_TYPES.find(t=>t.id===id);
+      return `<div class="tag"><span class="tag-icon-sm" style="color:var(--sage)">${t?.icon}</span><span class="tag-count">${count}×</span><span class="tag-name">${t?.label.split(" ").slice(0,2).join(" ")}</span></div>`;
+    }).join("");
 
-const devCounts={};
-devs.forEach(d=>{devCounts[d.type]=(devCounts[d.type]||0)+1;});
-const devTags=Object.entries(devCounts).map(([id,count])=>{
-  const t=DEV_TYPES.find(t=>t.id===id);
-  return `<div class="tag"><span class="tag-icon-sm" style="color:var(--gold)">${t?.icon}</span><span class="tag-count">${count}×</span><span class="tag-name">${t?.label.split(" ").slice(0,2).join(" ")}</span></div>`;
-}).join("");
+    const devCounts={};
+    devs.forEach(d=>{devCounts[d.type]=(devCounts[d.type]||0)+1;});
+    const devTags=Object.entries(devCounts).map(([id,count])=>{
+      const t=DEV_TYPES.find(t=>t.id===id);
+      return `<div class="tag"><span class="tag-icon-sm" style="color:var(--gold)">${t?.icon}</span><span class="tag-count">${count}×</span><span class="tag-name">${t?.label.split(" ").slice(0,2).join(" ")}</span></div>`;
+    }).join("");
 
-const wkMeas=state.measurements.find(m=>m.weekKey===wk);
-const measLine=wkMeas?`<div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);margin-bottom:10px;letter-spacing:0.06em">
-  ${wkMeas.phase?`<span style="color:var(--gold)">${wkMeas.phase}</span> · `:""}${[["waist","W"],["hips","H"],["bust","B"],["weight","Wt"]].filter(([f])=>wkMeas[f]).map(([f,l])=>`${l} ${wkMeas[f]}`).join("  ")}
-</div>`:"";
+    const wkMeas=state.measurements.find(m=>m.weekKey===wk);
+    const measLine=wkMeas?`<div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--dim);margin-bottom:10px;letter-spacing:0.06em">
+      ${wkMeas.phase?`<span style="color:var(--gold)">${wkMeas.phase}</span> · `:""}${[["waist","W"],["hips","H"],["bust","B"],["weight","Wt"]].filter(([f])=>wkMeas[f]).map(([f,l])=>`${l} ${wkMeas[f]}`).join("  ")}
+    </div>`:"";
 
-return `<div class="week-block">
-  <div class="week-header">
-    <div class="week-label-text" style="color:${isThis?"var(--text)":"var(--muted)"}">${getWeekLabel(wk)}</div>
-    <div class="week-wins">${wins.length} win${wins.length!==1?"s":""}</div>
-  </div>
-  ${measLine}
-  ${winTags||devTags?`<div class="tag-row">${winTags}${devTags}</div>`:""}
-  ${entries.map(e=>{
-    const isWin=e.kind==="win";
-    const types=isWin?e.types.split(",").map(id=>WIN_TYPES.find(t=>t.id===id)).filter(Boolean):[DEV_TYPES.find(t=>t.id===e.type)].filter(Boolean);
-    return `<div class="entry-row">
-      <span class="entry-icon" style="color:${isWin?"var(--sage)":"var(--gold)"}">${types[0]?.icon||"·"}</span>
-      <div style="flex:1">
-        <span class="entry-main" style="color:${isWin?"var(--text)":"var(--muted)"}">${types.map(t=>t.label).join(" · ")}</span>
-        ${e.note?`<div class="entry-sub">${e.note}</div>`:""}
+    return `<div class="week-block">
+      <div class="week-header">
+        <div class="week-label-text" style="color:${isThis?"var(--text)":"var(--muted)"}">${getWeekLabel(wk)}</div>
+        <div class="week-wins">${wins.length} win${wins.length!==1?"s":""}</div>
       </div>
-      <div class="entry-time">${e.date}<br/>${e.time}</div>
+      ${measLine}
+      ${winTags||devTags?`<div class="tag-row">${winTags}${devTags}</div>`:""}
+      ${entries.map(e=>{
+        const isWin=e.kind==="win";
+        const types=isWin?e.types.split(",").map(id=>WIN_TYPES.find(t=>t.id===id)).filter(Boolean):[DEV_TYPES.find(t=>t.id===e.type)].filter(Boolean);
+        return `<div class="entry-row">
+          <span class="entry-icon" style="color:${isWin?"var(--sage)":"var(--gold)"}">${types[0]?.icon||"·"}</span>
+          <div style="flex:1">
+            <span class="entry-main" style="color:${isWin?"var(--text)":"var(--muted)"}">${types.map(t=>t.label).join(" · ")}</span>
+            ${e.note?`<div class="entry-sub">${e.note}</div>`:""}
+          </div>
+          <div class="entry-time">${e.date}<br/>${e.time}</div>
+        </div>`;
+      }).join("")}
     </div>`;
-  }).join("")}
-</div>`;
-```
-
-}).join(””);
+  }).join("");
 }
 
 function render() {
-const streak=calcStreak();
-const badge=document.getElementById(“streakBadge”), num=document.getElementById(“streakNum”);
-if (badge&&num) { badge.style.display=streak>0?“block”:“none”; num.textContent=streak; }
-document.querySelectorAll(”.nav-btn”).forEach((b,i)=>b.classList.toggle(“active”,[“log”,“results”,“history”][i]===state.view));
-const content=document.getElementById(“content”);
-if (content) content.innerHTML=state.view===“log”?renderLog():state.view===“results”?renderResults():renderHistory();
+  const streak=calcStreak();
+  const badge=document.getElementById("streakBadge"), num=document.getElementById("streakNum");
+  if (badge&&num) { badge.style.display=streak>0?"block":"none"; num.textContent=streak; }
+  document.querySelectorAll(".nav-btn").forEach((b,i)=>b.classList.toggle("active",["log","results","history"][i]===state.view));
+  const content=document.getElementById("content");
+  if (content) content.innerHTML=state.view==="log"?renderLog():state.view==="results"?renderResults():renderHistory();
 }
 
 function setView(v) { state.view=v; render(); }
 function toggleWinType(id) {
-const idx=state.winForm.types.indexOf(id);
-if (idx>-1) state.winForm.types.splice(idx,1); else state.winForm.types.push(id);
-render();
+  const idx=state.winForm.types.indexOf(id);
+  if (idx>-1) state.winForm.types.splice(idx,1); else state.winForm.types.push(id);
+  render();
 }
 function toggleDevType(id) { state.devForm.type=state.devForm.type===id?null:id; render(); }
 function toggleDevOpen() { state.devOpen=!state.devOpen; render(); }
-function setPhase(p) { state.measForm.phase=state.measForm.phase===p?””:p; render(); }
+function setPhase(p) { state.measForm.phase=state.measForm.phase===p?"":p; render(); }
 
-render();
+try { render(); } catch(err) {
+  document.getElementById("content").innerHTML =
+    "<div style='font-family:monospace;font-size:12px;color:#c05a3a;padding:20px'>" +
+    "<b>JS Error:</b><br>" + err.message + "<br><br>" + (err.stack||"").replace(/\n/g,"<br>") +
+    "</div>";
+}
 loadData();
 </script>
-
 </body>
 </html>
